@@ -18,17 +18,20 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var mPager: ViewPager2
     val NUM_PAGES = 2
+    var viewPager: ViewPager2?=null
     var name_tab = arrayOf("Home", "Profile")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         setContentView(R.layout.activity_main)
+        viewPager=findViewById(R.id.viewpager)
 
         val pagerAdapter = ScreenSlidePagerAdapter(this)
-        viewpager.adapter = pagerAdapter
+        viewPager?.adapter = pagerAdapter
 
-        val tabLayoutMediator = TabLayoutMediator(tab, viewpager, true,
+
+        val tabLayoutMediator = TabLayoutMediator(tab, viewPager!!, true,
             TabLayoutMediator.OnConfigureTabCallback { tab, position ->
             })
         tabLayoutMediator.attach();
@@ -39,10 +42,10 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
-        if (viewpager.currentItem == 0) {
+        if (viewPager!!.currentItem == 0) {
             super.onBackPressed()
         } else {
-            viewpager.currentItem = mPager.currentItem - 1
+            viewPager!!.currentItem = mPager.currentItem - 1
         }
     }
 
