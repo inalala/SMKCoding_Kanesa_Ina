@@ -2,8 +2,7 @@ package id.ina.barbershop
 
 import android.Manifest
 import android.content.pm.PackageManager
-import android.os.Build
-import android.os.Bundle
+import android.os.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.snackbar.Snackbar
 import androidx.core.view.GravityCompat
@@ -15,6 +14,8 @@ import androidx.appcompat.widget.Toolbar
 import android.view.Menu
 import androidx.appcompat.app.ActionBarDrawerToggle
 import kotlinx.android.synthetic.main.activity_barbershop__list.*
+import java.time.Instant
+import java.util.zip.Inflater
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
 
@@ -53,6 +54,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
+
         navView.setNavigationItemSelectedListener(this)
     }
 
@@ -90,6 +92,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_gallery -> {
 
             }
+
             R.id.nav_barbershop  -> {
 
             }
