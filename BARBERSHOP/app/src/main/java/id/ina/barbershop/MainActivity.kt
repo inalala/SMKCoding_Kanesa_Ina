@@ -1,6 +1,7 @@
 package id.ina.barbershop
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.*
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -90,6 +91,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 // Handle the camera action
             }
             R.id.nav_gallery -> {
+                val i = Intent(this@MainActivity, Galeri::class.java)
+                startActivity(i)
 
             }
 

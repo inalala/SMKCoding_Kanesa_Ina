@@ -10,17 +10,25 @@
         <LinearLayout
                 android:orientation="horizontal"
                 android:layout_width="match_parent" android:layout_height="wrap_content">
-            <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="50dp"
-                    android:layout_margin="@dimen/activity_horizontal_margin"
-                    android:src="@mipmap/oke"/>
-            <ImageView android:layout_width="100dp"
-                       android:layout_height="50dp"
-                        android:src="@mipmap/oke"/>
-            <ImageView android:layout_width="100dp"
-                       android:layout_height="50dp"
-                       android:src="@mipmap/oke"/>
+            <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/listMyFriends"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+           <!---->
+            <!--<ImageView-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:src="@mipmap/oke"/>-->
+            <!--<ImageView-->
+                    <!--android:layout_width="100dp"-->
+                    <!--android:layout_height="50dp"-->
+                    <!--android:src="@mipmap/oke"/>-->
+            <!--<ImageView android:layout_width="100dp"-->
+                       <!--android:layout_height="50dp"-->
+                       <!--android:src="@mipmap/oke"/>-->
+            <!--<ImageView android:layout_width="100dp"-->
+                       <!--android:layout_height="50dp"-->
+                       <!--android:src="@mipmap/oke"/>-->
         </LinearLayout>
     </ScrollView>
 
